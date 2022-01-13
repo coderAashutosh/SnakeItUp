@@ -18,6 +18,7 @@ body{
     position: absolute;
     top: 9px;
     right: 200px;
+    color: red;
     font-size: 40px;
     font-weight: bold;
     font-family: 'Style Script', cursive;
@@ -27,6 +28,7 @@ body{
     position: absolute;
     top: 65px;
     right: 220px;
+    color: red;
     font-size: 40px;
     font-weight: bold;
     font-family: 'Style Script', cursive;
@@ -62,3 +64,59 @@ body{
     border-radius: 8px;
 
 }
+ 
+.controls i{
+    font-size: 20px;
+    color: wheat;
+}
+
+.icons{
+    font-size: xx-large;
+    color: brown;
+    text-align: center;
+    display: none;
+}
+
+/* Responsiveness */
+
+@media(max-width: 1440px){
+    .score{
+        margin-right: -180px;
+    }
+    .high{
+            margin-right: -218px;
+    }
+    .icons{
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .score{
+        /* padding: 50px; */
+        margin-top: 10px;
+        margin-right: -280px;
+    }
+    .high{
+        margin-right: -300px;
+    }
+}
+
+@media (max-width: 640px){ 
+    .score{
+        margin-bottom: 100px;
+        margin-right: 100px;
+    }
+    .high{
+        margin-top: -50px;
+        margin-left: -80px;
+    }   
+}
+
+
+@media (max-width: 420px){
+    .score{
+        /* margin-top: -400px; */
+        margin-right: 70px;
+    }
+} 

@@ -3,7 +3,7 @@ const foodSound = new Audio('music/food.mp3');
 const gameOverSound = new Audio('music/gameover.mp3');
 const moveSound = new Audio('music/move.mp3');
 const musicSound = new Audio('music/music.mp3');
-let speed = 15;
+let speed = 3;
 let score = 0;
 let lastPaintTime = 0;
 let snakeArr = [
@@ -99,7 +99,10 @@ function gameEngine() {
 }
 
 // Main Logic Starts 
-musicSound.play();
+
+
+
+// musicSound.play();
 let hiscore = localStorage.getItem("hiscore");
 if (hiscore === null) {
     hiscoreval = 0;
@@ -137,3 +140,27 @@ window.addEventListener('keydown', e => {
             break;
     }
 })
+
+function Up() {
+    console.log('arrow up')
+    inputDir.x = 0;
+    inputDir.y = -1;
+}
+
+function Down() {
+    console.log('arrow Down')
+    inputDir.x = 0;
+    inputDir.y = 1;
+}
+
+function Left() {
+    console.log('arrow Left')
+    inputDir.x = -1;
+    inputDir.y = 0;
+}
+
+function Right() {
+    console.log('arrow Right')
+    inputDir.x = 1;
+    inputDir.y = 0;
+}
